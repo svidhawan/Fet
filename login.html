@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+ 
+ <form onsubmit="return check()">
+    <h2>Login Details</h2>
+    <label for="uname">Username: </label>
+    <input type="text" id="uname" name="uname" required><br><br>
+    <label for="pass">Password</label>
+    <input type="password" id="pass" name="pass" required><br><br>
+    <label for="cpass">Confirm Password</label>
+    <input type="password" id="cpass" name="cpass" required><br><br>
+    <p id="myp" style="color: red;"></p>
+    <button id="btn">Submit</button>
+ </form>
+
+ <script>
+     function check(){
+        var password = document.getElementById("pass").value;
+        var confirmPassword = document.getElementById("cpass").value;
+        alert("ps1"= password);
+        alert("ps2"= confirmPassword);
+        if(password != confirmPassword)
+        {
+            document.getElementById("pass").value="";
+            document.getElementById("cpass").value="";
+            document.getElementById("myp").innerHTML="Passord Invalid";
+           
+            return false;
+        }
+        else
+        {
+            document.getElementById("myp").innerHTML="";
+            alert("Login Successfully");
+            return true;
+        }
+     }
+     
+ </script>
+</body>
+</html>
