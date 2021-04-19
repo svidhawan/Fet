@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="900px" height="450px" style="border:1px solid #000000;">
+</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+var grd = ctx.createLinearGradient(0,0,200,0);
+grd.addColorStop(0,"blue");
+grd.addColorStop(1,"skyblue");
+
+ctx.fillStyle = grd;
+ctx.fillRect(0,0,900,450);
+
+var imgPath = 'download.jpg';
+var imgObj = new Image();
+imgObj.src = imgPath;
+var x = 0;
+var y = 0;
+imgObj.onload = function(){
+    context.drawImage(imgObj, x, y);
+}
+</script>
+<div>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+        ctx.beginPath();
+        ctx.arc(90, 100, 75, 1 * Math.PI, 2 * Math.PI, false);
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = 'Red';
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(90, 100, 65, 1 * Math.PI, 2 * Math.PI, false);
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = 'Orange';
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(90, 100, 55, 1 * Math.PI, 2 * Math.PI, false);
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = 'Yellow';
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(90, 100, 45, 1 * Math.PI, 2 * Math.PI, false);
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = 'Green';
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(90, 100, 35, 1 * Math.PI, 2 * Math.PI, false);
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = 'Blue';
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(90, 100, 25, 1 * Math.PI, 2 * Math.PI, false);
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = 'Indigo';
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(90, 100, 15, 1 * Math.PI, 2 * Math.PI, false);
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = 'Violet';
+        ctx.stroke();
+    </script>
+</div>
+<br>
+
+<img id="laptop" width="0" height="0" src="laptop.jpg">
+<img id="iphone" width="0" height="0" src="iphone.jpg">
+<img id="ipad" width="0" height="0" src="ipad.jpg">
+<script>
+    window.onload = function() {
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      var img = document.getElementById("laptop");
+      ctx.drawImage(img, 5, 200,250,200);
+      var img = document.getElementById("iphone");
+      ctx.drawImage(img, 260, 200,250,200);
+      var img = document.getElementById("ipad");
+      ctx.drawImage(img, 520, 200,250,200);
+    }
+</script>
+
+</body>
+</html>

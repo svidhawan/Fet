@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="smiley.css"> -->
+    <!-- <link type="text/javascript" href="smile.js"> -->
+    <title>smiley</title>
+</head>
+<body>
+    
+
+    <canvas id="smiley" width="800" height="600">
+
+        <script>
+            drawSmiley();
+        
+            function drawSmiley() {
+                var canvas = document.getElementById("smiley");
+                var context = canvas.getContext("2d");
+        
+                // Draw outer face circle
+                context.beginPath();
+                context.arc(300, 300, 100, 0, degreesToRadians(360), true);
+                context.fillStyle = "yellow";
+                context.fill();
+                context.stroke();
+
+        
+                // Draw left eye circle
+                context.beginPath();
+                context.arc(250, 270, 15, 0, degreesToRadians(360), true);
+                context.stroke();
+                context.fillStyle='black';
+                context.fill();
+        
+                // Draw right eye circle
+                context.beginPath();
+                context.arc(350, 270, 15, 20, degreesToRadians(360), true);
+                context.stroke();
+                context.fillStyle='black';
+                context.fill();
+                
+        
+              // Draw smile arc
+                context.beginPath();
+                context.arc(300, 330, 55, degreesToRadians(20), degreesToRadians(160), false);
+                context.stroke();
+            
+            }
+        
+            function degreesToRadians(degrees) {
+                return (degrees * Math.PI) / 180;
+            }
+        </script>
+</body>
+</html>
